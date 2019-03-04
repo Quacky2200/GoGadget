@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="MenuButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="30" MinWidth="10" MinHeight="15">
+    <Grid Background="#FF515151">
+        <Label x:Name="ButtonLabel" Content="Example" VerticalContentAlignment="Center" Foreground="White"/>
+            <Grid.Triggers>
+                <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation x:Name="Highlight" Storyboard.TargetProperty="(Grid.Background).Color" Duration="0:0:0.3" From="#FF515151" To="Gray"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation x:Name="HighlightFade" Storyboard.TargetProperty="(Grid.Background).Color" Duration="0:0:0.3" From="Gray" To="#FF515151"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Grid.Triggers>
+        </Grid>
+</UserControl>
