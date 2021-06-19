@@ -7,7 +7,7 @@ There are multiple versions of this project.
 [Project branch](https://github.com/Quacky2200/gogadget/tree/v1)
 
 ## GoGadget v2
-[Project branch - missing](javascript:;)
+[Project branch](https://github.com/Quacky2200/gogadget/tree/v2)
 
 ## GoGadget v3
 [Project branch](https://github.com/Quacky2200/gogadget/tree/v3)
