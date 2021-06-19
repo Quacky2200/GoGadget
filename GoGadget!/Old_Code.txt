@@ -1,0 +1,81 @@
+﻿Old Code:
+
+App1.Image = RetrieveIcon(Database(0, 1, 0)(Database(1, 1, 1).count))
+'App1.Image = Icon.ExtractAssociatedIcon(Database(0, 1, 0)(Database(1, 1, 1).count)).ToBitmap 'Detect if image is fualty
+
+
+
+Sub EnableAppDrag(ByVal sender As Object, ByVal e As System.EventArgs)
+        '    'pop out the icon
+        '    'delete the old icon
+        '    'make make where icons going to go, e.g. below hovered one
+        '    'mouseup - put icon where it is
+        '    Dim name, link, picture As String
+        '    found = Database(1, 1, 1).IndexOf(sender)
+        '    name = My.Settings.name(found)
+        '    link = My.Settings.link(found)
+        '    picture = My.Settings.picturelink(found)
+        '    Dim f1 As Integer = found
+        '    Dim TempFrm As New Form
+        '    TempFrm.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        '    TempFrm.Size = New Point(44, 44)
+        '    TempFrm.BackColor = Me.BackColor
+        '    TempFrm.TransparencyKey = Me.BackColor
+        '    'TempFrm.Controls.Add(New PictureBox)
+        '    'TempFrm.Controls.Add(New PictureBox)
+        '    'TempFrm.Controls(0).BackColor = Color.White
+        '    'TempFrm.Controls(0).BackgroundImageLayout = ImageLayout.Stretch
+        '    'TempFrm.Controls(0).Size = Border1(0).Size
+        '    'TempFrm.Controls(1).Left = 2
+        '    'TempFrm.Controls(1).Top = 2
+        '    'TempFrm.Controls(1).BackgroundImage = App1(found).Image
+        '    'TempFrm.Controls(1).BackColor = Color.White
+        '    'TempFrm.Controls(1).BackgroundImageLayout = ImageLayout.Stretch
+        '    'TempFrm.Controls(1).Size = App1(0).Size
+        '    'TempFrm.Controls(1).BringToFront()
+        '    'TempFrm.ShowInTaskbar = False
+        '    'TempFrm.ShowIcon = False
+        '    'TempFrm.Location = New Point(MousePosition.X - Border1(0).Width / 2, MousePosition.Y - Border1(0).Height / 2)
+        '    Dim timer1 As New Timer
+        '    timer1.Interval = 375
+        '    AddHandler timer1.Tick, Sub()
+        '                                Dim ref As Integer = If(Math.Round(MousePosition.Y / 44) - 1 > My.Settings.name.Count - 1, My.Settings.name.Count - 1, Math.Round(MousePosition.Y / 44) - 1)
+        '                                If MouseButtons = Windows.Forms.MouseButtons.Left Then
+        '                                    If timer1.Interval = 375 Then
+        '                                        'Run once 
+        '                                        RenameToolStripMenuItem1.PerformClick()
+        '                                        pDock.Controls.Remove(Placer)
+        '                                        Placer.Dispose()
+        '                                        Placer = New PictureBox
+        '                                        Placer.Size = New Point(44, 44)
+        '                                        Placer.BackgroundImage = Image.FromFile("spacer.png")
+        '                                        pDock.Controls.Add(Placer)
+        '                                        Placer.Show()
+        '                                        Placer.SendToBack()
+        '                                    End If
+        '                                    timer1.Interval = 10
+        '                                    TempFrm.Show()
+        '                                    TempFrm.TopMost = True
+        '                                    TempFrm.BringToFront()
+        '                                    TempFrm.Location = New Point(MousePosition.X - 44 / 2, MousePosition.Y - 44 / 2)
+        '                                    If ref > 0 And MousePosition.X > Screen.PrimaryScreen.Bounds.Width - Me.Width Then
+        '                                        'Placer.Location = New Point(2, Border1(ref).Top + 22)
+        '                                    End If
+        '                                Else
+        '                                    timer1.Interval = 1000
+        '                                    timer1.Stop()
+        '                                    If TempFrm.Visible Then
+        '                                        If MousePosition.X > Screen.PrimaryScreen.Bounds.Width - Me.Width Then
+        '                                            My.Settings.name.Insert(ref + 1, name)
+        '                                            My.Settings.picturelink.Insert(ref + 1, picture)
+        '                                            My.Settings.link.Insert(ref + 1, link)
+        '                                            My.Settings.Save()
+        '                                            Refresh1()
+        '                                        End If
+        '                                    End If
+        '                                    pDock.Controls.Remove(Placer)
+        '                                    TempFrm.Close()
+        '                                End If
+        '                            End Sub
+        '    timer1.Start()
+    End Sub
