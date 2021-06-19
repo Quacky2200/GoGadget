@@ -3,6 +3,10 @@ GoGadget is an attempt to create a Ubuntu Unity dock alternative for Windows bac
 
 There are multiple versions of this project.
 
+## Screenshot
+
+![Screenshot Image](https://github.com/Quacky2200/GoGadget/blob/master/GoGadget.png)
+
 ## GoGadget v1
 [Project branch](https://github.com/Quacky2200/gogadget/tree/v1)
 
